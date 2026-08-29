@@ -6,15 +6,15 @@ const plans = [
 ];
 
 const categories = ['All','Chest','Back','Shoulders','Biceps','Triceps','Legs','Abs','Cardio'];
+const library = plans.flatMap(plan => plan.exercises.map(name => ({name,focus:plan.focus})));
 
 export default function WorkoutPage() {
   return <main className="app">
-    <header className="top"><div className="brand">Fit<span>Track</span></div><div className="nav"><a className="pill" href="/">Today</a><span className="pill active-pill">Workout</span><span className="pill">Profile</span></div></header>
-    <section className="hero"><h1>Workout Library 🏋️</h1><p>Choose a plan or explore exercises by muscle group.</p></section>
+    <header className="top"><div className="brand">Fit<span>Track</span></div><div className="nav"><a className="pill" href="/">Today</a><span className="pill active-pill">Workout</span><a className="pill" href="/food">Food</a><a className="pill" href="/profile">Profile</a></div></header>
+    <section className="hero"><h1>Workout Library 🏋️</h1><p>Choose a plan or start a guided training session.</p></section>
     <div className="section">Workout plans</div>
-    <div className="plan-grid">{plans.map(plan => <a className="plan-card" href={'#'+plan.name.replaceAll(' ','-').toLowerCase()} key={plan.name}><div className="exercise-art">{plan.icon}</div><div className="plan-body"><h2>{plan.name}</h2><p>{plan.focus}</p><span>{plan.exercises.length} exercises →</span></div></a>)}</div>
-    <div className="section">Exercise library</div>
-    <div className="chips">{categories.map(category => <button className="chip" key={category}>{category}</button>)}</div>
-    <div className="exercise-list">{plans.flatMap(plan => plan.exercises.slice(0,3).map((name,i) => ({name,focus:plan.focus,icon:['🏋️','💪','🔥'][i%3]}))).map((exercise,i) => <div className="exercise-row" key={exercise.name}><div className="exercise-thumb">{exercise.icon}</div><div className="exercise-info"><strong>{exercise.name}</strong><small>{exercise.focus}</small></div><span className="sets">3 × 10–12</span></div>)}</div>
+    <div className="plan-grid">{plans.map(plan => <a className="plan-card" href="/workout/session" key={plan.name}><div className="exercise-art">{plan.icon}</div><div className="plan-body"><h2>{plan.name}</h2><p>{plan.focus}</p><span>{plan.exercises.length} exercises → Start</span></div></a>)}</div>
+    <div className="section">Exercise library</div><div className="chips">{categories.map(category => <button className="chip" key={category}>{category}</button>)}</div>
+    <div className="exercise-list">{library.map((exercise,i)=><div className="exercise-row" key={exercise.name}><div className="exercise-thumb">{['🏋️','💪','🔥'][i%3]}</div><div className="exercise-info"><strong>{exercise.name}</strong><small>{exercise.focus}</small></div><span className="sets">3 × 10–12</span></div>)}</div>
   </main>
 }
