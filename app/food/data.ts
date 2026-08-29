@@ -1,0 +1,17 @@
+export const foods = [
+  {name:'Chicken Breast',serving:'100 g',calories:165,protein:31,carbs:0,fat:3.6,fiber:0,sugar:0,sodium:74,vitaminB6:0.6,iron:1,calcium:15},
+  {name:'Egg',serving:'1 large',calories:72,protein:6.3,carbs:0.4,fat:4.8,fiber:0,sugar:0.2,sodium:71,vitaminB6:0.1,iron:0.9,calcium:28},
+  {name:'Cooked White Rice',serving:'100 g',calories:130,protein:2.7,carbs:28,fat:0.3,fiber:0.4,sugar:0.1,sodium:1,vitaminB6:0.1,iron:0.2,calcium:10},
+  {name:'Paneer',serving:'100 g',calories:265,protein:18.3,carbs:6.1,fat:20.8,fiber:0,sugar:2.6,sodium:22,vitaminB6:0.1,iron:2.2,calcium:208},
+  {name:'Dal, cooked',serving:'100 g',calories:116,protein:9,carbs:20,fat:0.4,fiber:7.9,sugar:1.8,sodium:2,vitaminB6:0.2,iron:3.3,calcium:19},
+  {name:'Oats, dry',serving:'100 g',calories:389,protein:16.9,carbs:66.3,fat:6.9,fiber:10.6,sugar:0.9,sodium:2,vitaminB6:0.1,iron:4.7,calcium:54},
+  {name:'Banana',serving:'100 g',calories:89,protein:1.1,carbs:23,fat:0.3,fiber:2.6,sugar:12.2,sodium:1,vitaminB6:0.4,iron:0.3,calcium:5},
+  {name:'Apple',serving:'100 g',calories:52,protein:0.3,carbs:13.8,fat:0.2,fiber:2.4,sugar:10.4,sodium:1,vitaminB6:0,iron:0.1,calcium:6},
+  {name:'Almonds',serving:'30 g',calories:174,protein:6.4,carbs:6.5,fat:15,fiber:3.7,sugar:1.3,sodium:0,vitaminB6:0,iron:1.1,calcium:75},
+  {name:'Greek Yogurt',serving:'100 g',calories:59,protein:10.2,carbs:3.6,fat:0.4,fiber:0,sugar:3.2,sodium:36,vitaminB6:0.1,iron:0.1,calcium:110},
+  {name:'Roti, whole wheat',serving:'1 medium',calories:120,protein:3.5,carbs:18.5,fat:3.2,fiber:3,sugar:0.5,sodium:120,vitaminB6:0.1,iron:1.2,calcium:20},
+  {name:'Idli',serving:'2 pieces',calories:116,protein:4,carbs:24,fat:0.5,fiber:1.5,sugar:1,sodium:220,vitaminB6:0.1,iron:1.1,calcium:20},
+  {name:'Dosa',serving:'1 medium',calories:168,protein:3.9,carbs:29,fat:4.3,fiber:1.5,sugar:1,sodium:240,vitaminB6:0.1,iron:1.5,calcium:20},
+  {name:'Boiled Potato',serving:'100 g',calories:87,protein:1.9,carbs:20.1,fat:0.1,fiber:1.8,sugar:0.9,sodium:4,vitaminB6:0.3,iron:0.3,calcium:5},
+  {name:'Peanut',serving:'30 g',calories:170,protein:7.3,carbs:4.8,fat:14.6,fiber:2.5,sugar:1.4,sodium:2,vitaminB6:0.1,iron:1.3,calcium:28},
+] as const;
